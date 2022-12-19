@@ -1,6 +1,7 @@
 import './App.css';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import Form from './components/Form';
+import HttpRequest from './components/HttpRequests';
 
 function App() {
     return (
@@ -12,11 +13,23 @@ function App() {
                     Form
                 </NavLink>
             </div>
+            <div>
+                <NavLink
+                    to="/request"
+                >
+                    HTTP Requests
+                </NavLink>
+            </div>
+
             <Routes>
                 <Route
                     path='/form'
                     element={<Form />}
                 />
+                <Route
+                    path='/request'
+                    element={<HttpRequest />}
+                />    
             </Routes>
         </>
     );
